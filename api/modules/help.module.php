@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Help module
  * - Provides help about the modules we have

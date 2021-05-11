@@ -35,8 +35,4 @@ jobs:
 
       - name: PHP Code Sniff
         run: |
-          ./vendor/bin/phpcs --ignore=vendor/ .
-
-      - name: PHP Mess Detector
-        run: |
-          ./vendor/bin/phpmd . ansi cleancode,codesize,controversial,design,naming,unusedcode --exclude=vendor/
+          ./vendor/bin/phpcs --standard=PSR12 --ignore=vendor/ --warning-severity=0 .

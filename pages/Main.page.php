@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class MainPage extends Page
 {
     public function __construct()

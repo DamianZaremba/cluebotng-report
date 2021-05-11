@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class SignOutPage extends Page
 {
     public function __construct()

@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class OptionsPage extends Page
 {
     public function __construct()

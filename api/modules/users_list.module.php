@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Users list
  * - Returns users in the database

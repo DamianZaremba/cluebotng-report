@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class ViewPage extends Page
 {
     private $row;

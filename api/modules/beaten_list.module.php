@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Beaten list
  * - Returns beaten entries in the database

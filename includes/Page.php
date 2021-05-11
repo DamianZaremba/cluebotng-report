@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class Page
 {
     private static $pages = null;
@@ -36,7 +38,7 @@ class Page
             $className = 'Page';
         }
 
-        $page = new $className;
+        $page = new $className();
         return $page;
     }
 

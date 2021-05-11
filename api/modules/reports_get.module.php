@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Reports get
  * - Returns a specific report in the database

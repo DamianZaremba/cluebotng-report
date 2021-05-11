@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Output functions
  * - Functions used for output

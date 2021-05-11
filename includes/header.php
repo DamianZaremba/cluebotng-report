@@ -1,4 +1,5 @@
 <?PHP
+
 ini_set('display_errors', 'Off');
 error_reporting(E_ALL | E_STRICT);
 session_start();

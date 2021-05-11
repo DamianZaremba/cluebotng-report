@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class SignInPage extends Page
 {
     public function __construct()

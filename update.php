@@ -1,4 +1,5 @@
 <?PHP
+
 require_once 'includes/header.php';
 
 function getEditIdsData($ids)

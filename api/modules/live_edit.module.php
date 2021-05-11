@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Live edit
  * - Runs a wikipedia diff ID though the core and returns the result
@@ -30,7 +31,8 @@ $api = array_shift($api['query']['pages']);
 $user = $api['revisions'][0]['user'];
 $ns = $api['ns'];
 $title = $api['title'];
-$timestamp = $api['revisions'][0]['timestamp'];;
+$timestamp = $api['revisions'][0]['timestamp'];
+;
 
 $cb = unserialize(file_get_contents('https://tools.wmflabs.org/cluebot/cb.php?user=' . urlencode($user) . '&ns=' . $ns . '&title=' . urlencode($title) . '&timestamp=' . urlencode($timestamp)));
 

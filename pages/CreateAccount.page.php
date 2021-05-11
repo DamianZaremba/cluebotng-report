@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class CreateAccountPage extends Page
 {
     private $bad_captca;

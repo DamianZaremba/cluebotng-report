@@ -26,20 +26,5 @@
 <div id="content">
     <?PHP $page->writeContent(); ?>
 </div>
-
-<!--
-	<div id='header'>
-		
-	</div>
-	<div style="clear: both; border-bottom: 1px solid #d3e1f9;"></div>
-	<div id='navigationContainer'>
-		<div id='navigation'>
-			
-		</div>
-	</div>
-	<div id='content'>
-		
-	</div>
--->
 </body>
 </html>

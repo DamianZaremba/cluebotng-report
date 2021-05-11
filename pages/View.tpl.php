@@ -35,7 +35,6 @@
                 ?>
                 <small>(anonymous)</small>
                 <?PHP
-
             } ?>
         </td>
     </tr>
@@ -62,7 +61,6 @@
                 ?>&status=4">Resolved</a>
                 )
                 <?PHP
-
             } ?>
         </td>
     </tr>
@@ -73,24 +71,23 @@
     <div class="comment" id="cmt<?PHP echo $comment['id'];
     ?>">
         <div class="commentheader">
-			<span class="commentdate">
-				<?PHP echo date('l, \t\h\e jS \o\f F Y \a\t h:i:s A', $comment['timestamp']);
+            <span class="commentdate">
+                <?PHP echo date('l, \t\h\e jS \o\f F Y \a\t h:i:s A', $comment['timestamp']);
                 ?>
-			</span>
+            </span>
             <span class="commentid">
-				<?PHP if (isSAdmin()) {
+                <?PHP if (isSAdmin()) {
                     ?>
                     <a href="?page=View&id=<?PHP echo $this->row['id'];
                     ?>&deletecomment=<?PHP echo $comment['id'];
-                    ?>">(x)</a> &middot;
+?>">(x)</a> &middot;
                     <?PHP
-
                 }
                 ?>
-				<a href="#cmt<?PHP echo $comment['id'];
+                <a href="#cmt<?PHP echo $comment['id'];
                 ?>">#<?PHP echo $comment['id'];
-                    ?></a>
-			</span>
+?></a>
+            </span>
         </div>
 
 
@@ -102,19 +99,16 @@
                     ?>
                     <small>(anonymous)</small>
                     <?PHP
-
                 }
                 ?>
                 <?PHP if ($comment['sadmin']) {
                     ?>
                     <small>(super admin)</small>
                     <?PHP
-
                 } elseif ($comment['admin']) {
                     ?>
                     <small>(admin)</small>
                     <?PHP
-
                 }
                 ?>
             </div>
@@ -127,7 +121,6 @@
         </div>
     </div>
     <?PHP
-
 } ?>
 
 <?PHP
@@ -142,15 +135,15 @@ if (isset($_SESSION['username'])) {
             <th>Username:</th>
             <td><input type="text" name="user" value="<?PHP if (isset($user)) {
                     echo $user;
-                } elseif ($user === "Anonymous") {
-                    echo $_POST['user'];
-                } ?>"/></td>
+                                                      } elseif ($user === "Anonymous") {
+                                                          echo $_POST['user'];
+                                                      } ?>"/></td>
         </tr>
         <tr>
             <th>Comment:</th>
             <td><textarea name="comment" cols=80 rows=25><?php if (isset($_POST['comment'])) {
                         echo $_POST['comment'];
-                    } ?></textarea></td>
+                                                         } ?></textarea></td>
         </tr>
         <?php
         if (isset($this->bad_captca) && $this->bad_captca === true) {

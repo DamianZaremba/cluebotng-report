@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class ListPage extends Page
 {
     private $ids;

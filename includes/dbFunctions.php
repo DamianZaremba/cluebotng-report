@@ -1,4 +1,5 @@
 <?PHP
+
 $statuses = array(
     'Reported',
     'Invalid',
@@ -92,7 +93,8 @@ function getReport($id)
 {
     global $mysql;
     $id = '\'' . mysqli_real_escape_string($mysql, $id) . '\'';
-    $result = mysqli_query($mysql,
+    $result = mysqli_query(
+        $mysql,
         'SELECT `revertid`, UNIX_TIMESTAMP(`timestamp`) AS `time`, `reporterid`, `reporter`, `status`
 			FROM `reports`
 			WHERE `revertid` = ' . $id
@@ -113,7 +115,8 @@ function getReport($id)
         'comments' => array()
     );
 
-    $result = mysqli_query($mysql,
+    $result = mysqli_query(
+        $mysql,
         'SELECT `commentid`, UNIX_TIMESTAMP( `timestamp` ) AS `time`, `userid`, `user`, `comment`
 			FROM `comments`
 			WHERE `revertid` = ' . $id

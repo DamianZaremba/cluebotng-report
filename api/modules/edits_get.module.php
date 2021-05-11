@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Edits get
  * - Returns a specific edit in the database
@@ -58,7 +59,7 @@ if (mysqli_num_rows($result) === 1) {
         );
 
         if (preg_match("/ANN scored at ([0-9.]+)/", $row['reason'], $matches) === 1) {
-            $data['edit-' . $row['id']]['score'] = (Float)$matches[1];
+            $data['edit-' . $row['id']]['score'] = (float)$matches[1];
         }
 
         $bresult = mysqli_query($mysql, "SELECT * FROM `beaten` WHERE `diff` = '" . mysqli_real_escape_string($mysql, $row['diff']) . "'");
@@ -104,10 +105,10 @@ if (mysqli_num_rows($result) === 1) {
                 if (isset($edit->{"ID"})) {
                     $data['edit-' . $row['id']]['review_submitted'] = 1;
 
-                    $required = (String)$edit->Required;
-                    $constructive = (String)$edit->Constructive;
-                    $skipped = (String)$edit->Skipped;
-                    $vandalism = (String)$edit->Vandalism;
+                    $required = (string)$edit->Required;
+                    $constructive = (string)$edit->Constructive;
+                    $skipped = (string)$edit->Skipped;
+                    $vandalism = (string)$edit->Vandalism;
                     $max = max($constructive, $skipped, $vandalism);
                     $sum = $constructive + $skipped + $vandalism;
 
@@ -118,9 +119,9 @@ if (mysqli_num_rows($result) === 1) {
                             "skipped" => $skipped,
                             "vandalism" => $vandalism,
                         ),
-                        "classification" => (String)$edit->Classification,
-                        "status" => (String)$edit->Status,
-                        "newclassification" => (String)$edit->NewClassification,
+                        "classification" => (string)$edit->Classification,
+                        "status" => (string)$edit->Status,
+                        "newclassification" => (string)$edit->NewClassification,
                     );
                 }
             }

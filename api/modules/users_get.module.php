@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Users get
  * - Returns a specific user in the database

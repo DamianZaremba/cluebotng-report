@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class ReportPage extends Page
 {
     private $row;

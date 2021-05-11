@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Reports list
  * - Returns reports in the database

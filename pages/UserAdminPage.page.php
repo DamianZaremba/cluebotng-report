@@ -1,5 +1,7 @@
 <?PHP
 
+namespace ReportInterface;
+
 class UserAdminPage extends Page
 {
     private $users;
